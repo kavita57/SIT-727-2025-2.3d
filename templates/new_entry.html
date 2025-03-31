@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>New Journal Entry</h2>
+    <form method="post">
+        <input type="text" name="title" placeholder="Title" required><br>
+        <textarea name="content" placeholder="Write your journal entry..." required></textarea><br>
+        <button type="submit">Save Entry</button>
+    </form>
+    <br>
+    <a href="{{ url_for('journal.index') }}">Back to Journal</a>
+{% endblock %}

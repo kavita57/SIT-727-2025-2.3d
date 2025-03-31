@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-journal-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-journal
+  template:
+    metadata:
+      labels:
+        app: flask-journal
+    spec:
+      containers:
+      - name: flask-journal
+        image: flask-journal-app:latest  # Docker image name
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MONGO_URI
+          value: "your_mongodb_atlas_connection_uri"  # Replace with your MongoDB Atlas URI
+---

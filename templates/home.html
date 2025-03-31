@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Journal</title>
+</head>
+<body>
+    <header>
+        <h1>My Personal Journal</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/new">New Entry</a>
+        </nav>
+    </header>
+    <hr>
+    {% block content %}
+    <section>
+        <h2>Journal Entries</h2>
+        {% if entries %}
+            <ul>
+                {% for entry in entries %}
+                    <li>
+                        <h3>{{ entry.title }}</h3>
+                        <p>Journal: {{ entry.content }}</p>
+                        <p>sentiment: {{entry.sentiment}}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No journal entries found.</p>
+        {% endif %}
+    </section>
+    {% endblock %}
+</body>
+</html>
