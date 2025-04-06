@@ -1,7 +1,3 @@
-Here's a detailed **Markdown** documentation for your Flask Journal App project, including the Dockerization and Kubernetes setup.
-
----
-
 # **Flask Personal Journal App with MongoDB Atlas**
 
 This is a **Flask-based personal journal application** that allows users to add journal entries, view them, and automatically analyze the sentiment of the content. The application is **containerized using Docker** and can be deployed to **Kubernetes**. It uses **MongoDB Atlas** as a managed database.
