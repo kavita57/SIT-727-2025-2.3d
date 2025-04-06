@@ -19,5 +19,5 @@ spec:
         - containerPort: 5000
         env:
         - name: MONGO_URI
-          value: "your_mongodb_atlas_connection_uri"  # Replace with your MongoDB Atlas URI
+          value: "mongodb+srv://dkavita2121:Slappy132@cluster0.dwumgci.mongodb.net/journalDB?retryWrites=true&w=majority&appName=Cluster0"  # Replace with your MongoDB Atlas URI
 ---
